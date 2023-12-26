@@ -1,0 +1,31 @@
+﻿@using E_Ticaret_Web.Entity
+@model IEnumerable<Product>
+<div class="row">
+
+    @foreach (var urun in Model)
+    {
+        <div class="col-md-4 mb-3">
+            <div class="card">
+                <img class="card-img-top"
+                     src="~/Upload/@urun.Image"
+                     alt="@urun.Name" 
+                     width="100px;"
+                     height="300px;"/>
+                <div class="card-body">
+                    <h4 class="card-title"><a href="/Home/Details/@urun.Id">@urun.Name</a></h4>
+                    <p class="card-text">
+                        @urun.Description
+                    </p>
+                </div>
+                <div class="card-footer">
+                    <small class="text-muted product-price"><i class="fa-solid fa-turkish-lira-sign"></i>@urun.Price</small>
+                    <a href="/Home/Details/@urun.Id" class="btn btn-primary btn-sm float-right">
+                        <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+                        Ürünü İncele
+                    </a>
+                </div>
+            </div>
+        </div>
+    }
+
+</div>

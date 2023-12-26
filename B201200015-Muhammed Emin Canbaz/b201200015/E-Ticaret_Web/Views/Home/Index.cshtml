@@ -1,0 +1,31 @@
+﻿@using E_Ticaret_Web.Entity
+@model IEnumerable<Product>
+@{
+    ViewBag.Title = "Index";
+}
+
+<!--Jumbotron başlangıç-->
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-4">Hoşgeldiniz!</h1>
+        <p class="lead">
+            Aradığınız tatları bulacağınız sitemize hoşgeldiniz. Kuruyemişlerimiz, Taze yemişlerimiz ve Şekerlemelerimizle hizmetinizdeyiz. Şimdiden Afiyet Olsun!!!
+        </p>
+        <hr class="my-4" />
+        <p>
+           Ürünlerimizi sizler için hijyen standartlarında üretiyor ve paketliyoruz.
+        </p>
+        
+
+    </div>
+</div>
+<!--Jumbotron bitiş-->
+
+<div class="container pb-5">
+   @Html.Partial("_ProductList",Model)
+</div>
+
+<!--Card Başlangıç-->
+
+
+<!--Card Bitiş-->

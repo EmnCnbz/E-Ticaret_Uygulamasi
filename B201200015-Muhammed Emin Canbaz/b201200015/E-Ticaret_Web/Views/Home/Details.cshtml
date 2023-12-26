@@ -1,0 +1,126 @@
+﻿@using E_Ticaret_Web.Entity
+@model Product
+@{
+    ViewBag.Title = "Details";
+}
+<div class="container pb-5">
+    <div class="row">
+        <div class="col md-6">
+            <img src="~/Upload/@Model.Image" class="img.fluid rounded  alt="" width="500" height="375"/>
+        </div>
+        <div class="col md-6">
+            <div class="row">
+                <div class="col md-12"><h1>@Model.Name</h1></div>
+            </div>
+            <div class="row">
+                <div class="col md-12">
+                    <span class="badge badge-primary">In Stock</span>
+                    <span class="product-number">#123213</span>
+                </div>
+            </div>
+            <div class="row mt-1">
+                <div class="col md-12">
+                    <div id="description">
+                        @Model.Description
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col-md-4">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star-half-stroke"></i>
+                    <span class="badge badge-success">18</span>
+                </div>
+                <div class="col-md-4" id="write-review">
+                    <a href="#">Write a Review</a>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col md-12">
+                    <h4 id="product-price">@Model.Price TL</h4>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col md-12">
+                    <button class="btn btn-success">
+                        <i class="fa-solid fa-cart-shopping"></i> Add To Cart
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-md-12">
+            <div class="bd-example bd-example-tabs">
+                <ul class="nav nav-tabs mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           id="pills-description-tab"
+                           data-toggle="pill"
+                           href="#pills-description"
+                           role="tab"
+                           aria-controls="pills-description"
+                           aria-expanded="true">Description</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           id="pills-payment-tab"
+                           data-toggle="pill"
+                           href="#pills-payment"
+                           role="tab"
+                           aria-controls="pills-payment"
+                           aria-expanded="true">Payment Methods</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link"
+                           id="pills-comment-tab"
+                           data-toggle="pill"
+                           href="#pills-comment"
+                           role="tab"
+                           aria-controls="pills-comment"
+                           aria-expanded="true">Comment</a>
+                    </li>
+                </ul>
+                <div class="tab-content" id="pills-tabContent">
+                    <div class="tab-pane fade show active"
+                         id="pills-description"
+                         role="tabpanel"
+                         aria-labelledby="pills-description-tab">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                            facere, itaque ex repudiandae obcaecati nobis quos quasi,
+                            iste, quidem quibusdam sapiente recusandae eius omnis
+                            doloremque minima enim voluptatibus reprehenderit debitis.
+                        </p>
+                    </div>
+                    <div class="tab-pane fade"
+                         id="pills-payment"
+                         role="tabpanel"
+                         aria-labelledby="pills-payment-tab">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque
+                            facere, itaque ex repudiandae obcaecati nobis quos quasi,
+                            iste, quidem quibusdam sapiente recusandae eius omnis
+                            doloremque minima enim voluptatibus reprehenderit debitis.
+                        </p>
+                    </div>
+                    <div class="tab-pane-fade"
+                         id="pills-comment"
+                         role="tabpanel"
+                         aria-labelledby="pills-comment-tab">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                            Debitis aut dolore ipsam facilis in nulla est commodi officia
+                            esse similique a accusantium explicabo voluptas excepturi
+                            quibusdam, sunt cumque, necessitatibus inventore.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
